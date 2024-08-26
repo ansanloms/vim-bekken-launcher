@@ -1,5 +1,5 @@
 import type { Entrypoint } from "./deps/@denops/std/mod.ts";
-import { assert, is } from "./deps/@core/unknownutil/mod.ts";
+import { as, assert, is } from "./deps/@core/unknownutil/mod.ts";
 import * as yaml from "./deps/@std/yaml/mod.ts";
 
 type ItemCommand = {
@@ -34,7 +34,7 @@ type Launcher = {
 const isItemCommand = is.ObjectOf({
   name: is.String,
   command: is.String,
-  silent: is.OptionalOf(is.Boolean),
+  silent: as.Optional(is.Boolean),
 });
 
 const isLauncher = is.ObjectOf({
