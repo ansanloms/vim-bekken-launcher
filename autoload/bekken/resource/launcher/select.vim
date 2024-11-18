@@ -23,7 +23,7 @@ export def Filter(key: string, bekken: b.Bekken): bool
     bekken.Close()
 
     if selected != null
-      call bekken#Open("launcher", [selected.path], {})
+      call bekken#Run("launcher", [selected.path], {})
     endif
   endif
 
